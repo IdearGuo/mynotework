@@ -1,0 +1,33 @@
+<%- include header %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="article-box">
+                    <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <%= title %>
+                    </div>
+                    <div class="panel-body">
+                        <div class="alert alert-warning" role="alert">
+                            <strong>文章题目:  </strong><%= art.title %>
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            <span class="label label-info"><strong>文章标签:   </strong><%= art.tag %></span>
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="create-time">
+                            <span class="text-bold"><strong>时间:</strong></span>
+                                <%= moment(art.createTime).locale('zh-cn').format('LL HH:mm:ss') %>
+                        </span>
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            <p><strong>文章内容:   </strong><%= art.content %></p>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include footer %>
